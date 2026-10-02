@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ART NEST 🌻 | Sunflower Tote Bag Painting Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FFFDF9',
+                            100: '#FAF7F2',
+                            200: '#F3EFE6',
+                        },
+                        butter: {
+                            100: '#FEF3C7',
+                            300: '#FDE68A',
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                        },
+                        sage: {
+                            100: '#E8F0EC',
+                            300: '#B2CEBE',
+                            500: '#84A98C',
+                            700: '#52796F',
+                        },
+                        earth: {
+                            700: '#6B4E3D',
+                            800: '#4A3E3D',
+                            900: '#2D241E',
+                        },
+                        terracotta: '#D97706'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    boxShadow: {
+                        'warm': '0 10px 30px -10px rgba(74, 62, 61, 0.08)',
+                        'warm-hover': '0 20px 40px -15px rgba(217, 119, 6, 0.15)',
+                        'glow': '0 0 25px rgba(253, 230, 138, 0.6)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for aesthetic feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF7F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B2CEBE;
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #84A98C;
+        }
+        
+        .glass-card {
+            background: rgba(255, 253, 249, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(253, 230, 138, 0.4);
+        }
+
+        .design-card.active {
+            border-color: #D97706;
+            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2), 0 10px 25px -5px rgba(217, 119, 6, 0.15);
+            transform: translateY(-4px);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(1deg); }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-cream-100 text-earth-900 font-sans antialiased selection:bg-butter-300 selection:text-earth-900 pb-20 md:pb-0">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-40 w-full glass-card border-b border-butter-300/30 px-4 py-3 sm:px-8">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="text-2xl transform group-hover:rotate-12 transition-transform duration-300">🌻</span>
+                <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-earth-900">THE ART NEST</span>
+            </a>
+            
+            <div class="flex items-center gap-3">
+                <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-butter-100 text-earth-800 border border-butter-300/50">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Only 15 Slots Available
+                </span>
+                <a href="#register" class="px-4 py-2 text-xs sm:text-sm font-semibold text-earth-900 bg-butter-300 hover:bg-butter-400 rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                    Book Slot
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden px-4 pt-8 pb-12 sm:pt-16 sm:pb-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-100 text-sage-700 font-medium text-xs sm:text-sm border border-sage-300/50 shadow-sm animate-float">
+                        <span>Your Little Creative Escape
+                            <span>🌻</span>
+                            <br>
+                           • 📍 Linear Garden, Pimple Saudagar
+                            <br>
+                       •  📅 Thursday, 8th October 2026
+                        •  ⏰ 3:30 PM - 6:00 PM
+                        
+                       </span>
+
+                        
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-6xl font-bold leading-tight text-earth-900">
+                        Paint Your Own <br class="hidden sm:inline" />
+                        <span class="italic text-terracotta relative">
+                            Little Piece
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-butter-300 -z-10" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                <path d="M0 15 Q 50 0 100 15" stroke="currentColor" stroke-width="8" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </span> of Sunshine!
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-earth-800 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Join us for a cozy sunflower-themed tote bag painting experience. Bring your girlies, unleash your creativity, and leave with a tote bag made entirely by <strong class="font-semibold text-earth-900">YOU!</strong>
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#register" class="w-full sm:w-auto px-8 py-4 bg-butter-400 hover:bg-butter-500 text-earth-900 font-bold text-base rounded-2xl shadow-warm hover:shadow-warm-hover transition-all duration-300 transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <span>Book My Slot</span>
+                            <span class="text-xl">🌻</span>
+                        </a>
+                        <div class="flex items-center gap-2 text-xs font-semibold text-earth-700 bg-white/60 px-4 py-2 rounded-xl border border-cream-200">
+                            <span>✨ Beginners Welcome</span>
+                            <span>•</span>
+                            <span>🎨 All Materials Provided</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Imagery Grid -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative background glow -->
+                        <div class="absolute -top-6 -left-6 w-48 h-48 bg-butter-300/40 rounded-full blur-3xl -z-10"></div>
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-sage-300/40 rounded-full blur-3xl -z-10"></div>
+
+                        <div class="grid grid-cols-2 gap-3 sm:gap-4 p-2">
+                            <div class="space-y-3 sm:space-y-4">
+                                <div class="rounded-2xl overflow-hidden shadow-warm border-2 border-white aspect-[3/4] relative group">
+                                    <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=600&q=80" 
+                                         alt="Sunflower Aesthetic" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                         onerror="this.src='https://placehold.co/400x500/FEF3C7/4A3E3D?text=Sunflowers+Aesthetic'"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-earth-900/40 to-transparent"></div>
+                                    <span class="absolute bottom-3 left-3 text-white text-xs font-semibold px-2.5 py-1 bg-white/30 backdrop-blur-md rounded-full">Pure Vibes ✨</span>
+                                </div>
+                                <div class="bg-butter-100 p-4 rounded-2xl border border-butter-300/50 text-center">
+                                    <span class="text-2xl block mb-1">🖌️</span>
+                                    <p class="font-serif text-earth-900 font-bold text-lg">No Prior Art Skills Needed</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 sm:space-y-4 pt-6">
+                                <div class="bg-sage-100 p-4 rounded-2xl border border-sage-300/50 text-center">
+                                    <span class="text-2xl block mb-1">🍰</span>
+                                    <p class="font-serif text-earth-900 font-bold text-lg">Snacks & Sips Included</p>
+                                </div>
+                                <div class="rounded-2xl overflow-hidden shadow-warm border-2 border-white aspect-[3/4] relative group">
+                                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" 
+                                         alt="Painted Tote Bag" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                         onerror="this.src='https://placehold.co/400x500/E8F0EC/4A3E3D?text=Tote+Bag+Painting'"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-earth-900/40 to-transparent"></div>
+                                    <span class="absolute bottom-3 left-3 text-white text-xs font-semibold px-2.5 py-1 bg-white/30 backdrop-blur-md rounded-full">Custom Canvas 👜</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="py-12 sm:py-16 px-4 bg-white/50 border-y border-butter-300/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-xs font-bold tracking-widest text-terracotta uppercase">All-Inclusive Experience</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-earth-900 mt-1">What's Waiting For You</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 text-center hover:shadow-warm transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-butter-100 rounded-2xl flex items-center justify-center mx-auto mb-5 text-3xl group-hover:scale-110 transition-transform duration-300 shadow-sm border border-butter-300/50">
+                        🎨
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-earth-900 mb-2">Canvas & Supplies</h3>
+                    <p class="text-sm text-earth-800 leading-relaxed">
+                        Your premium cotton tote bag, acrylic paints, brushes, stencils, palettes, and protective aprons are all provided.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 text-center hover:shadow-warm transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-sage-100 rounded-2xl flex items-center justify-center mx-auto mb-5 text-3xl group-hover:scale-110 transition-transform duration-300 shadow-sm border border-sage-300/50">
+                        🍹
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-earth-900 mb-2">Sips & Bites</h3>
+                    <p class="text-sm text-earth-800 leading-relaxed">
+                        Enjoy a refreshing iced welcome drink and delicious, photo-worthy snacks to keep your creative energy popping!
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 text-center hover:shadow-warm transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-5 text-3xl group-hover:scale-110 transition-transform duration-300 shadow-sm border border-amber-300/50">
+                        ✨
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-earth-900 mb-2">Cozy Girlies Vibe</h3>
+                    <p class="text-sm text-earth-800 leading-relaxed">
+                        A relaxed, wholesome aesthetic atmosphere with cute playlist tunes and polaroid photo ops with your squad.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Choose Your Tote Bag Design -->
+    <section class="py-12 sm:py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-xs font-bold tracking-widest text-terracotta uppercase">Step 1 of 2</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-earth-900 mt-1">Pick Your Sunshine Style 🌻</h2>
+                <p class="text-sm sm:text-base text-earth-800 mt-2">Choose the design template you'd love to paint during the workshop!</p>
+            </div>
+
+            <!-- 4 Selectable Design Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" id="design-grid">
+                
+                <!-- Design Option 1 -->
+                <div onclick="selectDesign('Design 1: Golden Bloom')" 
+                     id="card-design-1"
+                     class="design-card active cursor-pointer bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 border-2 border-transparent shadow-sm hover:shadow-md transition-all relative group flex flex-col justify-between">
+                    <div class="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3 bg-cream-200">
+                        <img src="C:\Users\Tejashree Pawar\OneDrive\Desktop\1st workshop art nest\sunflower 1.jpg" 
+                             alt="Design 1: Golden Bloom" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/400x400/FEF3C7/4A3E3D?text=Design+1+Golden+Bloom'"/>
+                        <span class="check-badge absolute top-2 right-2 bg-terracotta text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow">✓</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider block">Option 01</span>
+                        <h4 class="font-serif font-bold text-base sm:text-lg text-earth-900">Design 1</h4>
+                        <p class="text-xs text-earth-700">Golden Bloom Stencil</p>
+                    </div>
+                </div>
+
+                <!-- Design Option 2 -->
+                <div onclick="selectDesign('Design 2: Sunflower bouquet')" 
+                     id="card-design-2"
+                     class="design-card cursor-pointer bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 border-2 border-transparent shadow-sm hover:shadow-md transition-all relative group flex flex-col justify-between">
+                    <div class="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3 bg-cream-200">
+                        <img src="C:\Users\Tejashree Pawar\OneDrive\Desktop\1st workshop art nest\sunflower 2.jpeg" 
+                             alt="Design 2: Sunflower bouquet" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/400x400/E8F0EC/4A3E3D?text=Design+2+Sunflower+Bouquet'"/>
+                        <span class="check-badge hidden absolute top-2 right-2 bg-terracotta text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow">✓</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider block">Option 02</span>
+                        <h4 class="font-serif font-bold text-base sm:text-lg text-earth-900">Design 2</h4>
+                        <p class="text-xs text-earth-700">Sunflower bouquet</p>
+                    </div>
+                </div>
+
+                <!-- Design Option 3 -->
+                <div onclick="selectDesign('Design 3: Minimal Sunshine')" 
+                     id="card-design-3"
+                     class="design-card cursor-pointer bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 border-2 border-transparent shadow-sm hover:shadow-md transition-all relative group flex flex-col justify-between">
+                    <div class="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3 bg-cream-200">
+                        <img src="C:\Users\Tejashree Pawar\OneDrive\Desktop\1st workshop art nest\sunflower 3.jpg" 
+                             alt="Design 3: Minimal Sunshine" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/400x400/FEF3C7/4A3E3D?text=Design+3+Minimal+Sunshine'"/>
+                        <span class="check-badge hidden absolute top-2 right-2 bg-terracotta text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow">✓</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider block">Option 03</span>
+                        <h4 class="font-serif font-bold text-base sm:text-lg text-earth-900">Design 3</h4>
+                        <p class="text-xs text-earth-700">Minimal Sunshine</p>
+                    </div>
+                </div>
+
+                <!-- Design Option 4 -->
+                <div onclick="selectDesign('Design 4: Sunflower & thoughts')" 
+                     id="card-design-4"
+                     class="design-card cursor-pointer bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 border-2 border-transparent shadow-sm hover:shadow-md transition-all relative group flex flex-col justify-between">
+                    <div class="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3 bg-cream-200">
+                        <img src="C:\Users\Tejashree Pawar\OneDrive\Desktop\1st workshop art nest\sunflower 4.jpg" 
+                             alt="Design 4: Sunflower & thoughts" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/400x400/E8F0EC/4A3E3D?text=Design+4+Sunflower+&+Thoughts'"/>
+                        <span class="check-badge hidden absolute top-2 right-2 bg-terracotta text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow">✓</span>
+                    </div>
+                  
+                
+                    <div>
+                        <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider block">Option 04</span>
+                        <h4 class="font-serif font-bold text-base sm:text-lg text-earth-900">Design 4</h4>
+                        <p class="text-xs text-earth-700">Sunflower & thoughts</p>
+                    </div>
+                </div>
+  <!-- Design Option 5: Customize Your Own Design -->
+                <div onclick="selectDesign('Design 5: Customize Your Own Design')" 
+                     id="card-design-5"
+                     class="design-card cursor-pointer bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 border-2 border-transparent shadow-sm hover:shadow-md transition-all relative group flex flex-col justify-between">
+                    <div class="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3 bg-butter-100 flex flex-col items-center justify-center p-4 text-center border border-dashed border-butter-400">
+                        <span class="text-3xl sm:text-4xl mb-2 group-hover:scale-110 transition-transform">🎨✨</span>
+                        <span class="text-xs font-bold text-earth-900">Your Own Idea</span>
+                        <span class="check-badge hidden absolute top-2 right-2 bg-terracotta text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow">✓</span>
+                    </div>
+                    <div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form & Booking Section -->
+    <section id="register" class="py-12 sm:py-16 px-4 bg-cream-200/60">
+        <div class="max-w-2xl mx-auto">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-warm border border-butter-300/60">
+                
+                <div class="text-center mb-8">
+                    <span class="text-xs font-bold tracking-widest text-terracotta uppercase">Step 2 of 2</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-earth-900 mt-1">Save Your Creative Spot!</h2>
+                    <p class="text-xs sm:text-sm text-earth-700 mt-1">Limited to 15 seats for a cozy experience.</p>
+                </div>
+
+                <!-- Registration Form -->
+                <form id="booking-form" onsubmit="handleBooking(event)" class="space-y-5">
+                    
+                    <!-- Full Name -->
+                    <div>
+                        <label for="fullName" class="block text-xs font-bold uppercase tracking-wider text-earth-800 mb-1.5">Your Full Name *</label>
+                        <input type="text" 
+                               id="fullName" 
+                               required 
+                               placeholder="e.g. Ananya Sharma" 
+                               class="w-full px-4 py-3.5 rounded-2xl bg-white border border-butter-300/80 text-earth-900 placeholder:text-earth-700/50 focus:outline-none focus:ring-2 focus:ring-butter-400 text-sm shadow-sm transition">
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div>
+                        <label for="contactNumber" class="block text-xs font-bold uppercase tracking-wider text-earth-800 mb-1.5">WhatsApp / Mobile Number *</label>
+                        <input type="tel" 
+                               id="contactNumber" 
+                               required 
+                               pattern="[0-9]{10}"
+                               placeholder="10-digit WhatsApp number" 
+                               class="w-full px-4 py-3.5 rounded-2xl bg-white border border-butter-300/80 text-earth-900 placeholder:text-earth-700/50 focus:outline-none focus:ring-2 focus:ring-butter-400 text-sm shadow-sm transition">
+                    </div>
+
+                    <!-- Selected Tote Bag Design (Auto populated) -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-earth-800 mb-1.5">Selected Tote Design</label>
+                        <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-butter-100/70 border border-butter-300 text-earth-900 text-sm">
+                            <span class="text-lg">✨</span>
+                            <input type="text" 
+                                   id="selectedDesign" 
+                                   readonly 
+                                   value="Design 1: Golden Bloom" 
+                                   class="bg-transparent font-bold w-full focus:outline-none text-earth-900 cursor-default">
+                        </div>
+                    </div>
+
+                    <!-- Pricing Display Card -->
+                    <div class="p-5 rounded-2xl bg-white border border-cream-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 my-6">
+                        <div>
+                            <span class="inline-block px-2.5 py-0.5 rounded-md bg-sage-100 text-sage-700 text-[11px] font-bold uppercase tracking-wider mb-1">All-Inclusive Pass ✨</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="font-serif text-3xl font-bold text-earth-900">₹449</span>
+                                <span class="text-xs text-earth-700">/ person</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-earth-700 max-w-xs text-center sm:text-right">
+                            Everything you need to create your own sunflower tote bag is included!
+                        </p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" 
+                            class="w-full py-4 bg-butter-400 hover:bg-butter-500 text-earth-900 font-bold text-base rounded-2xl shadow-warm hover:shadow-warm-hover transition-all duration-300 transform active:scale-[0.99] flex items-center justify-center gap-2">
+                        <span>BOOK MY SLOT</span>
+                        <span class="text-xl">🌻</span>
+                    </button>
+
+                    <!-- Important Confirmation Note -->
+                    <p class="text-xs text-center text-earth-700 leading-relaxed px-2">
+                        🔒 Your slot is confirmed once payment is completed and verified by our team via WhatsApp.
+                    </p>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Aesthetic Footer -->
+    <footer class="py-8 px-4 text-center text-xs text-earth-700 bg-cream-100 border-t border-butter-300/30">
+        <div class="max-w-xl mx-auto space-y-2">
+            <p class="font-serif text-base font-bold text-earth-900">THE ART NEST 🌻</p>
+            <p>Your Little Creative Escape • Workshop Series #01</p>
+            <p class="text-[11px] text-earth-700/70 pt-2">© 2026 THE ART NEST. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Dialog for Redirect Notification -->
+    <div id="redirectModal" class="fixed inset-0 bg-earth-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-sm w-full text-center space-y-4 shadow-2xl border border-butter-300">
+            <div class="w-16 h-16 bg-butter-100 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce">
+                📱
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-earth-900">Almost There! 🌻</h3>
+            <p class="text-xs sm:text-sm text-earth-800 leading-relaxed">
+                We are opening WhatsApp with your booking details. Just hit <strong class="font-bold">Send</strong> in WhatsApp, and our team will reply with your Payment QR code!
+            </p>
+            <button onclick="confirmWhatsAppRedirect()" class="w-full py-3 bg-butter-400 hover:bg-butter-500 text-earth-900 font-bold text-sm rounded-xl transition">
+                Continue to WhatsApp ➔
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // EDITABLE CONFIGURATION
+        // Insert your 10 to 12 digit WhatsApp number with country code (no + sign)
+        // Example for India: "919876543210"
+        // ==========================================
+        const YOUR_WHATSAPP_NUMBER = "7058886930";
+
+        let pendingWhatsAppUrl = "https://chat.whatsapp.com/HXfXdxXtdQ17HlyP3ASDt4";
+
+        /**
+         * Select tote bag design option
+         */
+        function selectDesign(designName) {
+            // Update readonly input in form
+            const input = document.getElementById('selectedDesign');
+            if (input) {
+                input.value = designName;
+            }
+
+            // Remove active style from all cards
+            const cards = document.querySelectorAll('.design-card');
+            cards.forEach(card => {
+                card.classList.remove('active');
+                const badge = card.querySelector('.check-badge');
+                if (badge) badge.classList.add('hidden');
+            });
+
+            // Highlight selected card
+            const mapping = {
+                'Design 1: Golden Bloom': 'card-design-1',
+                'Design 2: Sunflower bouquet': 'card-design-2',
+                'Design 3: Minimal Sunshine': 'card-design-3',
+                'Design 4: Sunflower & thoughts': 'card-design-4'
+            };
+
+            const selectedCardId = mapping[designName];
+            if (selectedCardId) {
+                const selectedCard = document.getElementById(selectedCardId);
+                if (selectedCard) {
+                    selectedCard.classList.add('active');
+                    const badge = selectedCard.querySelector('.check-badge');
+                    if (badge) badge.classList.remove('hidden');
+                }
+            }
+        }
+
+        /**
+         * Form Submission Handling & WhatsApp Link Generation
+         */
+        function handleBooking(event) {
+            event.preventDefault();
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const contactNumber = document.getElementById('contactNumber').value.trim();
+            const selectedDesign = document.getElementById('selectedDesign').value.trim();
+
+            if (!fullName || !contactNumber || !selectedDesign) {
+                alert("Please fill in all details before booking your slot! 🌻");
+                return;
+            }
+
+            // Basic phone validation
+            if (contactNumber.length < 10) {
+                alert("Please enter a valid 10-digit phone number.");
+                return;
+            }
+
+            // Construct WhatsApp Message
+            const messageText = 
+`Hi THE ART NEST! 🌻 I'd love to book my slot for your Sunflower Tote Bag Painting Workshop.
+
+Name: ${fullName}
+Contact: ${contactNumber}
+Selected Design: ${selectedDesign}
+Workshop: Sunflower Tote Bag Painting
+Price: ₹449
+
+Please share the payment QR code to complete my booking!`;
+
+            const encodedMessage = encodeURIComponent(messageText);
+            pendingWhatsAppUrl = `https://wa.me/${YOUR_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            // Show confirmation modal
+            document.getElementById('redirectModal').classList.remove('hidden');
+        }
+
+        /**
+         * Trigger actual redirection to WhatsApp
+         */
+        function confirmWhatsAppRedirect() {
+            if (pendingWhatsAppUrl) {
+                window.open(pendingWhatsAppUrl, '_blank');
+            }
+            document.getElementById('redirectModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
